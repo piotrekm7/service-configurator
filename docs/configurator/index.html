@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>configurator API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Package <code>configurator</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">from configurator.main import BaseSettings, SettingsError
+from configurator.fields import *
+
+__all__ = [
+    &#39;BaseSettings&#39;,
+    &#39;SettingsError&#39;,
+    &#39;Integer&#39;,
+    &#39;PositiveInteger&#39;,
+    &#39;String&#39;,
+    &#39;Email&#39;,
+    &#39;Boolean&#39;,
+    &#39;Float&#39;,
+    &#39;Url&#39;,
+    &#39;ValidationError&#39;
+]</code></pre>
+</details>
+</section>
+<section>
+<h2 class="section-title" id="header-submodules">Sub-modules</h2>
+<dl>
+<dt><code class="name"><a title="configurator.fields" href="fields.html">configurator.fields</a></code></dt>
+<dd>
+<div class="desc"><p>Settings fields</p></div>
+</dd>
+<dt><code class="name"><a title="configurator.main" href="main.html">configurator.main</a></code></dt>
+<dd>
+<div class="desc"><p>Settings class implementation</p></div>
+</dd>
+<dt><code class="name"><a title="configurator.utils" href="utils.html">configurator.utils</a></code></dt>
+<dd>
+<div class="desc"><p>Commonly used sets of settings.</p></div>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="configurator.BaseSettings"><code class="flex name class">
+<span>class <span class="ident">BaseSettings</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Base Settings model.
+All user's settings classes should be subclass of it.</p>
+<p>Creates a new Settings object.</p>
+<h2 id="args">Args</h2>
+<p><em>args:
+</em>*kwargs:</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class BaseSettings(Field, metaclass=SettingsMeta):
+    &#34;&#34;&#34;
+    Base Settings model.
+    All user&#39;s settings classes should be subclass of it.
+    &#34;&#34;&#34;
+    _type = dict
+
+    # Populated by the metaclass, defined here to help IDEs only
+    _fields = {}
+
+    def __init__(self, *args, **kwargs):
+        &#34;&#34;&#34;
+        Creates a new Settings object.
+        Args:
+            *args:
+            **kwargs:
+        &#34;&#34;&#34;
+        super().__init__(*args, **kwargs)
+        self.__data = {}
+        for k, v in self._fields.items():
+            # Embedded settings objects are stored in __data
+            if isinstance(v, BaseSettings):
+                self.__data[k] = deepcopy(v)
+            else:
+                self.__data[k] = v.default
+
+    def from_json(self, filename: str) -&gt; None:
+        &#34;&#34;&#34;
+        Loads config from json file.
+        Args:
+            filename: path to json file
+        &#34;&#34;&#34;
+        with open(filename) as json_file:
+            data = json.load(json_file)
+            self.from_dict(data)
+
+    def to_json(self, filename: str) -&gt; None:
+        &#34;&#34;&#34;
+        Saves current settings to json file.
+        Method can be used on a new object to generate template json.
+        Args:
+            filename: path to json file
+        &#34;&#34;&#34;
+        with open(filename, &#39;w&#39;) as outfile:
+            json.dump(self.to_dict(), outfile, indent=4)
+
+    def from_yaml(self, filename: str) -&gt; None:
+        &#34;&#34;&#34;
+        Loads config from yaml file.
+        Args:
+            filename: path to yaml file
+        &#34;&#34;&#34;
+        with open(filename) as yaml_file:
+            data = yaml.safe_load(yaml_file)
+            self.from_dict(data)
+
+    def to_yaml(self, filename: str) -&gt; None:
+        &#34;&#34;&#34;
+        Saves current settings to yaml file.
+        Method can be used on a new object to generate template yaml.
+        Args:
+            filename: path to yaml file
+        &#34;&#34;&#34;
+        with open(filename, &#39;w&#39;) as outfile:
+            yaml.dump(self.to_dict(), outfile)
+
+    def from_dict(self, data: dict, partial_update: bool = False) -&gt; None:
+        &#34;&#34;&#34;
+        Updates settings with provided dict.
+        All required settings should be present in the dict unless partial_update is True.
+        Args:
+            data: dictionary with new settings
+            partial_update: set True if you don&#39;t want to update all required settings
+        &#34;&#34;&#34;
+        for k, v in self._fields.items():
+            value = data.get(k)
+            if value is not None:
+                try:
+                    value = v.validate(value)
+                except ValidationError as ex:
+                    raise SettingsError(
+                        f&#39;Value {value} for field &#34;{k}&#34; did not pass validation checks: {ex}&#39;
+                    ) from ex
+                if isinstance(v, BaseSettings):
+                    self.__data[k].from_dict(value)
+                else:
+                    self.__data[k] = value
+            else:
+                if v.required and not partial_update:
+                    raise SettingsError(f&#39;Missing required value: {k}&#39;)
+
+    def to_dict(self) -&gt; dict:
+        &#34;&#34;&#34;
+        Returns settings in dictionary format.
+        Returns:
+            dictionary with all the settings as primitive types.
+        &#34;&#34;&#34;
+        return {k: (v if not isinstance(v, BaseSettings) else v.to_dict()) for k, v in self.__data.items()}
+
+    def __getattr__(self, name: str) -&gt; Any:
+        if name in self._fields:
+            return self.__data.get(name)
+        else:
+            raise AttributeError
+
+    def __setattr__(self, name: str, value: Any) -&gt; Any:
+        if name in self._fields:
+            if isinstance(self._fields[name], BaseSettings):
+                raise AttributeError(&#39;Overriding Settings objects is not allowed, use from_dict() method.&#39;)
+            self.__data[name] = self._fields[name].validate(value)
+        else:
+            super().__setattr__(name, value)</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="configurator.utils.BoxSettings" href="utils.html#configurator.utils.BoxSettings">BoxSettings</a></li>
+<li><a title="configurator.utils.BoxSettings.BoxAppSettings" href="utils.html#configurator.utils.BoxSettings.BoxAppSettings">BoxSettings.BoxAppSettings</a></li>
+<li>configurator.utils.BoxSettings.BoxAppSettings.BoxAuthorization</li>
+<li><a title="configurator.utils.OracleConnectorSettings" href="utils.html#configurator.utils.OracleConnectorSettings">OracleConnectorSettings</a></li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="configurator.BaseSettings.from_dict"><code class="name flex">
+<span>def <span class="ident">from_dict</span></span>(<span>self, data: dict, partial_update: bool = False) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Updates settings with provided dict.
+All required settings should be present in the dict unless partial_update is True.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>data</code></strong></dt>
+<dd>dictionary with new settings</dd>
+<dt><strong><code>partial_update</code></strong></dt>
+<dd>set True if you don't want to update all required settings</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def from_dict(self, data: dict, partial_update: bool = False) -&gt; None:
+    &#34;&#34;&#34;
+    Updates settings with provided dict.
+    All required settings should be present in the dict unless partial_update is True.
+    Args:
+        data: dictionary with new settings
+        partial_update: set True if you don&#39;t want to update all required settings
+    &#34;&#34;&#34;
+    for k, v in self._fields.items():
+        value = data.get(k)
+        if value is not None:
+            try:
+                value = v.validate(value)
+            except ValidationError as ex:
+                raise SettingsError(
+                    f&#39;Value {value} for field &#34;{k}&#34; did not pass validation checks: {ex}&#39;
+                ) from ex
+            if isinstance(v, BaseSettings):
+                self.__data[k].from_dict(value)
+            else:
+                self.__data[k] = value
+        else:
+            if v.required and not partial_update:
+                raise SettingsError(f&#39;Missing required value: {k}&#39;)</code></pre>
+</details>
+</dd>
+<dt id="configurator.BaseSettings.from_json"><code class="name flex">
+<span>def <span class="ident">from_json</span></span>(<span>self, filename: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loads config from json file.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong></dt>
+<dd>path to json file</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def from_json(self, filename: str) -&gt; None:
+    &#34;&#34;&#34;
+    Loads config from json file.
+    Args:
+        filename: path to json file
+    &#34;&#34;&#34;
+    with open(filename) as json_file:
+        data = json.load(json_file)
+        self.from_dict(data)</code></pre>
+</details>
+</dd>
+<dt id="configurator.BaseSettings.from_yaml"><code class="name flex">
+<span>def <span class="ident">from_yaml</span></span>(<span>self, filename: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Loads config from yaml file.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong></dt>
+<dd>path to yaml file</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def from_yaml(self, filename: str) -&gt; None:
+    &#34;&#34;&#34;
+    Loads config from yaml file.
+    Args:
+        filename: path to yaml file
+    &#34;&#34;&#34;
+    with open(filename) as yaml_file:
+        data = yaml.safe_load(yaml_file)
+        self.from_dict(data)</code></pre>
+</details>
+</dd>
+<dt id="configurator.BaseSettings.to_dict"><code class="name flex">
+<span>def <span class="ident">to_dict</span></span>(<span>self) ‑> dict</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Returns settings in dictionary format.</p>
+<h2 id="returns">Returns</h2>
+<p>dictionary with all the settings as primitive types.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_dict(self) -&gt; dict:
+    &#34;&#34;&#34;
+    Returns settings in dictionary format.
+    Returns:
+        dictionary with all the settings as primitive types.
+    &#34;&#34;&#34;
+    return {k: (v if not isinstance(v, BaseSettings) else v.to_dict()) for k, v in self.__data.items()}</code></pre>
+</details>
+</dd>
+<dt id="configurator.BaseSettings.to_json"><code class="name flex">
+<span>def <span class="ident">to_json</span></span>(<span>self, filename: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Saves current settings to json file.
+Method can be used on a new object to generate template json.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong></dt>
+<dd>path to json file</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_json(self, filename: str) -&gt; None:
+    &#34;&#34;&#34;
+    Saves current settings to json file.
+    Method can be used on a new object to generate template json.
+    Args:
+        filename: path to json file
+    &#34;&#34;&#34;
+    with open(filename, &#39;w&#39;) as outfile:
+        json.dump(self.to_dict(), outfile, indent=4)</code></pre>
+</details>
+</dd>
+<dt id="configurator.BaseSettings.to_yaml"><code class="name flex">
+<span>def <span class="ident">to_yaml</span></span>(<span>self, filename: str) ‑> None</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Saves current settings to yaml file.
+Method can be used on a new object to generate template yaml.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>filename</code></strong></dt>
+<dd>path to yaml file</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_yaml(self, filename: str) -&gt; None:
+    &#34;&#34;&#34;
+    Saves current settings to yaml file.
+    Method can be used on a new object to generate template yaml.
+    Args:
+        filename: path to yaml file
+    &#34;&#34;&#34;
+    with open(filename, &#39;w&#39;) as outfile:
+        yaml.dump(self.to_dict(), outfile)</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></b></code>:
+<ul class="hlist">
+<li><code><a title="configurator.fields.Field.type_" href="fields.html#configurator.fields.Field.type_">type_</a></code></li>
+<li><code><a title="configurator.fields.Field.validate" href="fields.html#configurator.fields.Field.validate">validate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="configurator.Boolean"><code class="flex name class">
+<span>class <span class="ident">Boolean</span></span>
+<span>(</span><span>required: bool = True, default: Any = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for bool type fields.</p>
+<p>Creates new Field object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>required</code></strong></dt>
+<dd>set true if field is crucial for the project and should be always provided</dd>
+<dt><strong><code>default</code></strong></dt>
+<dd>default field value if not specified in config</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Boolean(Field):
+    &#34;&#34;&#34;
+    Class for bool type fields.
+    &#34;&#34;&#34;
+    type_ = bool
+    default = False</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="configurator.Boolean.default"><code class="name">var <span class="ident">default</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></b></code>:
+<ul class="hlist">
+<li><code><a title="configurator.fields.Field.type_" href="fields.html#configurator.fields.Field.type_">type_</a></code></li>
+<li><code><a title="configurator.fields.Field.validate" href="fields.html#configurator.fields.Field.validate">validate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="configurator.Email"><code class="flex name class">
+<span>class <span class="ident">Email</span></span>
+<span>(</span><span>required: bool = True, default: Any = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for email fields.</p>
+<p>Creates new Field object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>required</code></strong></dt>
+<dd>set true if field is crucial for the project and should be always provided</dd>
+<dt><strong><code>default</code></strong></dt>
+<dd>default field value if not specified in config</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Email(String):
+    &#34;&#34;&#34;
+    Class for email fields.
+    &#34;&#34;&#34;
+
+    def validate(self, value: str) -&gt; str:
+        &#34;&#34;&#34;Validates email using simple regex.&#34;&#34;&#34;
+        value = super().validate(value)
+        regex = re.compile(r&#39;^\S+@\S+\.\S+$&#39;)
+        if regex.fullmatch(value) is None:
+            raise ValidationError(&#39;Provided string is not a valid email.&#39;)
+        return value</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.String" href="fields.html#configurator.fields.String">String</a></li>
+<li><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="configurator.Email.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, value: str) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Validates email using simple regex.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def validate(self, value: str) -&gt; str:
+    &#34;&#34;&#34;Validates email using simple regex.&#34;&#34;&#34;
+    value = super().validate(value)
+    regex = re.compile(r&#39;^\S+@\S+\.\S+$&#39;)
+    if regex.fullmatch(value) is None:
+        raise ValidationError(&#39;Provided string is not a valid email.&#39;)
+    return value</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="configurator.fields.String" href="fields.html#configurator.fields.String">String</a></b></code>:
+<ul class="hlist">
+<li><code><a title="configurator.fields.String.type_" href="fields.html#configurator.fields.Field.type_">type_</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="configurator.Float"><code class="flex name class">
+<span>class <span class="ident">Float</span></span>
+<span>(</span><span>required: bool = True, default: Any = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for floating-point numbers.</p>
+<p>Creates new Field object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>required</code></strong></dt>
+<dd>set true if field is crucial for the project and should be always provided</dd>
+<dt><strong><code>default</code></strong></dt>
+<dd>default field value if not specified in config</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Float(Field):
+    &#34;&#34;&#34;
+    Class for floating-point numbers.
+    &#34;&#34;&#34;
+    type_ = float
+    default = 0.0</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="configurator.Float.default"><code class="name">var <span class="ident">default</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></b></code>:
+<ul class="hlist">
+<li><code><a title="configurator.fields.Field.type_" href="fields.html#configurator.fields.Field.type_">type_</a></code></li>
+<li><code><a title="configurator.fields.Field.validate" href="fields.html#configurator.fields.Field.validate">validate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="configurator.Integer"><code class="flex name class">
+<span>class <span class="ident">Integer</span></span>
+<span>(</span><span>required: bool = True, default: Any = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for number type fields.</p>
+<p>Creates new Field object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>required</code></strong></dt>
+<dd>set true if field is crucial for the project and should be always provided</dd>
+<dt><strong><code>default</code></strong></dt>
+<dd>default field value if not specified in config</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Integer(Field):
+    &#34;&#34;&#34;
+    Class for number type fields.
+    &#34;&#34;&#34;
+    type_ = int
+    default = 0</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.PositiveInteger" href="fields.html#configurator.fields.PositiveInteger">PositiveInteger</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="configurator.Integer.default"><code class="name">var <span class="ident">default</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></b></code>:
+<ul class="hlist">
+<li><code><a title="configurator.fields.Field.type_" href="fields.html#configurator.fields.Field.type_">type_</a></code></li>
+<li><code><a title="configurator.fields.Field.validate" href="fields.html#configurator.fields.Field.validate">validate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="configurator.PositiveInteger"><code class="flex name class">
+<span>class <span class="ident">PositiveInteger</span></span>
+<span>(</span><span>required: bool = True, default: Any = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for positive integers - natural numbers.</p>
+<p>Creates new Field object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>required</code></strong></dt>
+<dd>set true if field is crucial for the project and should be always provided</dd>
+<dt><strong><code>default</code></strong></dt>
+<dd>default field value if not specified in config</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class PositiveInteger(Integer):
+    &#34;&#34;&#34;
+    Class for positive integers - natural numbers.
+    &#34;&#34;&#34;
+    default = 1
+
+    def validate(self, value: int) -&gt; int:
+        value = super().validate(value)
+        if value &lt;= 0:
+            raise ValidationError(&#39;PositiveInteger value must be greater than 0.&#39;)
+        return value</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.Integer" href="fields.html#configurator.fields.Integer">Integer</a></li>
+<li><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="configurator.PositiveInteger.default"><code class="name">var <span class="ident">default</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="configurator.fields.Integer" href="fields.html#configurator.fields.Integer">Integer</a></b></code>:
+<ul class="hlist">
+<li><code><a title="configurator.fields.Integer.type_" href="fields.html#configurator.fields.Field.type_">type_</a></code></li>
+<li><code><a title="configurator.fields.Integer.validate" href="fields.html#configurator.fields.Field.validate">validate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="configurator.SettingsError"><code class="flex name class">
+<span>class <span class="ident">SettingsError</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Thrown when Settings object is used incorrectly,
+i.e. required parameters are missing in config json</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class SettingsError(Exception):
+    &#34;&#34;&#34;
+    Thrown when Settings object is used incorrectly,
+    i.e. required parameters are missing in config json
+    &#34;&#34;&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>builtins.Exception</li>
+<li>builtins.BaseException</li>
+</ul>
+</dd>
+<dt id="configurator.String"><code class="flex name class">
+<span>class <span class="ident">String</span></span>
+<span>(</span><span>required: bool = True, default: Any = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for string type fields.</p>
+<p>Creates new Field object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>required</code></strong></dt>
+<dd>set true if field is crucial for the project and should be always provided</dd>
+<dt><strong><code>default</code></strong></dt>
+<dd>default field value if not specified in config</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class String(Field):
+    &#34;&#34;&#34;
+    Class for string type fields.
+    &#34;&#34;&#34;
+    type_ = str
+    default = &#39;&#39;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Subclasses</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.Email" href="fields.html#configurator.fields.Email">Email</a></li>
+<li><a title="configurator.fields.Url" href="fields.html#configurator.fields.Url">Url</a></li>
+</ul>
+<h3>Class variables</h3>
+<dl>
+<dt id="configurator.String.default"><code class="name">var <span class="ident">default</span> : Any</code></dt>
+<dd>
+<div class="desc"></div>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></b></code>:
+<ul class="hlist">
+<li><code><a title="configurator.fields.Field.type_" href="fields.html#configurator.fields.Field.type_">type_</a></code></li>
+<li><code><a title="configurator.fields.Field.validate" href="fields.html#configurator.fields.Field.validate">validate</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="configurator.Url"><code class="flex name class">
+<span>class <span class="ident">Url</span></span>
+<span>(</span><span>required: bool = True, default: Any = None)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Class for url fields.</p>
+<p>Creates new Field object.</p>
+<h2 id="args">Args</h2>
+<dl>
+<dt><strong><code>required</code></strong></dt>
+<dd>set true if field is crucial for the project and should be always provided</dd>
+<dt><strong><code>default</code></strong></dt>
+<dd>default field value if not specified in config</dd>
+</dl></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class Url(String):
+    &#34;&#34;&#34;
+    Class for url fields.
+    &#34;&#34;&#34;
+
+    def validate(self, value: str) -&gt; str:
+        &#34;&#34;&#34;Validates url using regular expression.&#34;&#34;&#34;
+        value = super().validate(value)
+        regex = regex = re.compile(
+            r&#39;^https?://&#39;  # http:// or https://
+            r&#39;(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|&#39;  # domain...
+            r&#39;localhost|&#39;  # localhost...
+            r&#39;\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})&#39;  # ...or ip
+            r&#39;(?::\d+)?&#39;  # optional port
+            r&#39;(?:/?|[/?]\S+)$&#39;, re.IGNORECASE)
+        if regex.fullmatch(value) is None:
+            raise ValidationError(&#39;Provided string is not a valid url.&#39;)
+        return value</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li><a title="configurator.fields.String" href="fields.html#configurator.fields.String">String</a></li>
+<li><a title="configurator.fields.Field" href="fields.html#configurator.fields.Field">Field</a></li>
+<li>abc.ABC</li>
+</ul>
+<h3>Methods</h3>
+<dl>
+<dt id="configurator.Url.validate"><code class="name flex">
+<span>def <span class="ident">validate</span></span>(<span>self, value: str) ‑> str</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Validates url using regular expression.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def validate(self, value: str) -&gt; str:
+    &#34;&#34;&#34;Validates url using regular expression.&#34;&#34;&#34;
+    value = super().validate(value)
+    regex = regex = re.compile(
+        r&#39;^https?://&#39;  # http:// or https://
+        r&#39;(?:(?:[A-Z0-9](?:[A-Z0-9-]{0,61}[A-Z0-9])?\.)+[A-Z]{2,6}\.?|&#39;  # domain...
+        r&#39;localhost|&#39;  # localhost...
+        r&#39;\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})&#39;  # ...or ip
+        r&#39;(?::\d+)?&#39;  # optional port
+        r&#39;(?:/?|[/?]\S+)$&#39;, re.IGNORECASE)
+    if regex.fullmatch(value) is None:
+        raise ValidationError(&#39;Provided string is not a valid url.&#39;)
+    return value</code></pre>
+</details>
+</dd>
+</dl>
+<h3>Inherited members</h3>
+<ul class="hlist">
+<li><code><b><a title="configurator.fields.String" href="fields.html#configurator.fields.String">String</a></b></code>:
+<ul class="hlist">
+<li><code><a title="configurator.fields.String.type_" href="fields.html#configurator.fields.Field.type_">type_</a></code></li>
+</ul>
+</li>
+</ul>
+</dd>
+<dt id="configurator.ValidationError"><code class="flex name class">
+<span>class <span class="ident">ValidationError</span></span>
+<span>(</span><span>*args, **kwargs)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Thrown when value for the Field didn't pass the validation.</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class ValidationError(Exception):
+    &#34;&#34;&#34;
+    Thrown when value for the Field didn&#39;t pass the validation.
+    &#34;&#34;&#34;</code></pre>
+</details>
+<h3>Ancestors</h3>
+<ul class="hlist">
+<li>builtins.Exception</li>
+<li>builtins.BaseException</li>
+</ul>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-submodules">Sub-modules</a></h3>
+<ul>
+<li><code><a title="configurator.fields" href="fields.html">configurator.fields</a></code></li>
+<li><code><a title="configurator.main" href="main.html">configurator.main</a></code></li>
+<li><code><a title="configurator.utils" href="utils.html">configurator.utils</a></code></li>
+</ul>
+</li>
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="configurator.BaseSettings" href="#configurator.BaseSettings">BaseSettings</a></code></h4>
+<ul class="two-column">
+<li><code><a title="configurator.BaseSettings.from_dict" href="#configurator.BaseSettings.from_dict">from_dict</a></code></li>
+<li><code><a title="configurator.BaseSettings.from_json" href="#configurator.BaseSettings.from_json">from_json</a></code></li>
+<li><code><a title="configurator.BaseSettings.from_yaml" href="#configurator.BaseSettings.from_yaml">from_yaml</a></code></li>
+<li><code><a title="configurator.BaseSettings.to_dict" href="#configurator.BaseSettings.to_dict">to_dict</a></code></li>
+<li><code><a title="configurator.BaseSettings.to_json" href="#configurator.BaseSettings.to_json">to_json</a></code></li>
+<li><code><a title="configurator.BaseSettings.to_yaml" href="#configurator.BaseSettings.to_yaml">to_yaml</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="configurator.Boolean" href="#configurator.Boolean">Boolean</a></code></h4>
+<ul class="">
+<li><code><a title="configurator.Boolean.default" href="#configurator.Boolean.default">default</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="configurator.Email" href="#configurator.Email">Email</a></code></h4>
+<ul class="">
+<li><code><a title="configurator.Email.validate" href="#configurator.Email.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="configurator.Float" href="#configurator.Float">Float</a></code></h4>
+<ul class="">
+<li><code><a title="configurator.Float.default" href="#configurator.Float.default">default</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="configurator.Integer" href="#configurator.Integer">Integer</a></code></h4>
+<ul class="">
+<li><code><a title="configurator.Integer.default" href="#configurator.Integer.default">default</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="configurator.PositiveInteger" href="#configurator.PositiveInteger">PositiveInteger</a></code></h4>
+<ul class="">
+<li><code><a title="configurator.PositiveInteger.default" href="#configurator.PositiveInteger.default">default</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="configurator.SettingsError" href="#configurator.SettingsError">SettingsError</a></code></h4>
+</li>
+<li>
+<h4><code><a title="configurator.String" href="#configurator.String">String</a></code></h4>
+<ul class="">
+<li><code><a title="configurator.String.default" href="#configurator.String.default">default</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="configurator.Url" href="#configurator.Url">Url</a></code></h4>
+<ul class="">
+<li><code><a title="configurator.Url.validate" href="#configurator.Url.validate">validate</a></code></li>
+</ul>
+</li>
+<li>
+<h4><code><a title="configurator.ValidationError" href="#configurator.ValidationError">ValidationError</a></code></h4>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
