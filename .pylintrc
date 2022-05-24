@@ -1,0 +1,4 @@
+[MESSAGES CONTROL]
+disable=invalid-name, too-few-public-methods, unspecified-encoding, bad-mcs-classmethod-argument, no-else-return
+[FORMAT]
+max-line-length=120
