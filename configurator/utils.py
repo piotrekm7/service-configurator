@@ -1,6 +1,6 @@
 """Commonly used sets of settings."""
 
-from configurator.fields import String, Integer, Url, Boolean
+from configurator.fields import String, Integer, Url
 from configurator.main import BaseSettings
 
 
