@@ -1,4 +1,5 @@
 # Service Configurator
+[![Coverage Status](https://coveralls.io/repos/github/piotrekm7/service-configurator/badge.svg)](https://coveralls.io/github/piotrekm7/service-configurator)
 
 Service Configurator is a python library created for managing settings and secrets for your service.
 
